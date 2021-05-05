@@ -1,0 +1,176 @@
+{% extends 'main/base.html' %} {% load static %} {% block banner %}
+<h4>Discounts</h4>
+<hr>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static 'main/images/d1.png' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'main/images/d1.png' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'main/images/d1.png' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<hr> {% endblock banner %} {% block feature_products %}
+<div class="container-sm">
+    <div class="row">
+        <h4>Featured products</h4>
+        <div class="card mx-3" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Product</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="{% url 'product_details' %}" class="btn btn-primary">View</a>
+            </div>
+
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Product</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="{% url 'product_details' %}" class="btn btn-primary">View</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-sm">
+        <div class="row">
+            <h4>Trending deals</h4>
+            <div class="card mx-3" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Product</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{% url 'product_details' %}" class="btn btn-primary">View</a>
+                </div>
+
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Product</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{% url 'product_details' %}" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+        {% endblock feature_products %}
+        <hr> {% block livesale %}
+
+        <div class="container mt-5">
+            <div class="row bg-danger text-center p-5 text-white border-bottom shadow">
+                <h1>SALE IS LIVE NOW</h1>
+                <span>5% Instant Discount on Axis Bank Credit and Debit Card</span>
+                <small class="fw-lighter">Term and Condition Applied (For details visit Bank's official Website)</small>
+            </div>
+        </div>
+        {% endblock livesale %} {% block main %}
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <img src="{% static 'main/images/cc.jpg' %}" alt="" srcset="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <img src="{% static 'main/images/upi.jpg' %}" alt="" srcset="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <img src="{% static 'main/images/nb.jpg' %}" alt="" srcset="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <img src="{% static 'main/images/bj.jpg' %}" alt="" srcset="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endblock main %} {% block offers %}
+
+        <div class="container-sm">
+            <div class="row">
+                <h4>Offers</h4>
+                <div class="card mx-3" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Product</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="{% url 'product_details' %}" class="btn btn-primary">View</a>
+                    </div>
+
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Product</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="{% url 'product_details' %}" class="btn btn-primary">View</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container-sm">
+                <div class="row">
+                    <h4>Most Purchased</h4>
+                    <div class="card mx-3" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Product</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="{% url 'product_details' %}" class="btn btn-primary">View</a>
+                        </div>
+
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Product</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="{% url 'product_details' %}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endblock offers %}
